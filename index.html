@@ -2436,313 +2436,106 @@
         }
 
         /* ===== responsive system: phone / tablet / laptop / HMI ===== */
-        html {
-            -webkit-text-size-adjust: 100%
-        }
-
-        img, svg, canvas, iframe {
-            max-width: 100%
-        }
-
-        .btn {
-            white-space: normal;
-            overflow-wrap: anywhere
-        }
-
-        .bar-act {
-            display: flex;
-            gap: 8px;
-            align-items: center
-        }
-
-        .menu-btn {
-            display: none
-        }
-
-        .skills, .grid {
-            grid-template-columns: repeat(auto-fill,minmax(min(100%,300px),1fr))
-        }
-
-        dialog {
-            max-height: 90vh;
-            max-height: 90dvh;
-            overflow-y: auto;
-            overscroll-behavior: contain;
-            -webkit-overflow-scrolling: touch
-        }
-
-        html:has(dialog[open]) {
-            overflow: hidden
-        }
-
-        .pv-tools {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 10px
-        }
-
-            .pv-tools .btn {
-                padding: 8px 14px;
-                font-size: 13px;
-                min-height: 40px
-            }
-
-        .ask {
-            bottom: calc(22px + env(safe-area-inset-bottom,0px))
-        }
-
-        .up {
-            bottom: calc(80px + env(safe-area-inset-bottom,0px))
-        }
+        html { -webkit-text-size-adjust: 100% }
+        img, svg, canvas, iframe { max-width: 100% }
+        .btn { white-space: normal; overflow-wrap: anywhere }
+        .bar-act { display: flex; gap: 8px; align-items: center }
+        .menu-btn { display: none }
+        .skills, .grid { grid-template-columns: repeat(auto-fill,minmax(min(100%,300px),1fr)) }
+        dialog { max-height: 90vh; max-height: 90dvh; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch }
+        html:has(dialog[open]) { overflow: hidden }
+        .pv-tools { display: flex; justify-content: flex-end; margin-bottom: 10px }
+        .pv-tools .btn { padding: 8px 14px; font-size: 13px; min-height: 40px }
+        .ask { bottom: calc(22px + env(safe-area-inset-bottom,0px)) }
+        .up { bottom: calc(80px + env(safe-area-inset-bottom,0px)) }
 
         @media(max-width:1100px) {
-            nav {
-                gap: 20px
-            }
+            nav { gap: 20px }
         }
 
         @media(max-width:900px) {
-            .hero, .about {
-                grid-template-columns: 1fr
-            }
-
-            .hero {
-                min-height: 0
-            }
-
-            .hv {
-                max-width: 460px;
-                width: 100%;
-                margin-inline: auto
-            }
-
-            nav {
-                display: none
-            }
-
-            .menu-btn {
-                display: grid
-            }
-
-            .bar.open nav {
-                display: flex;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                padding: 6px 24px 14px;
-                background: var(--bg);
-                border-bottom: 1px solid var(--line);
-                box-shadow: var(--shadow)
-            }
-
-                .bar.open nav a {
-                    padding: 15px 4px;
-                    font-size: 16px;
-                    border-bottom: 1px solid var(--line)
-                }
-
-                    .bar.open nav a::after {
-                        display: none
-                    }
+            .hero, .about { grid-template-columns: 1fr }
+            .hero { min-height: 0 }
+            .hv { max-width: 460px; width: 100%; margin-inline: auto }
+            nav { display: none }
+            .menu-btn { display: grid }
+            .bar.open nav { display: flex; flex-direction: column; gap: 0; position: absolute; top: 100%; left: 0; right: 0; padding: 6px 24px 14px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow) }
+            .bar.open nav a { padding: 15px 4px; font-size: 16px; border-bottom: 1px solid var(--line) }
+            .bar.open nav a::after { display: none }
         }
 
         @media(max-width:560px) {
-            .wrap {
-                width: calc(100% - 28px)
-            }
-
-            .bar-in {
-                height: 64px
-            }
-
-            .bar.open nav {
-                padding-inline: 14px
-            }
-
-            .hero h1 {
-                font-size: clamp(32px,10vw,44px)
-            }
-
-            .hero .row .btn {
-                flex: 1 1 100%;
-                justify-content: center
-            }
-
-            .cta .btn {
-                width: 100%;
-                justify-content: center
-            }
-
-            .cta {
-                padding: 36px 18px
-            }
-
-            .tl {
-                padding-left: 22px
-            }
-
-            .job::before {
-                left: -31px
-            }
-
-            .foot {
-                flex-direction: column;
-                text-align: center
-            }
-
-            .chat-b {
-                height: min(52dvh,340px)
-            }
-
-            .chat-f input {
-                font-size: 16px
-            }
-
-            .fact {
-                align-items: flex-start
-            }
-
-            section.wrap h2 {
-                gap: 10px
-            }
-
-            .ib.hi {
-                width: 38px;
-                height: 38px
-            }
-
-            dialog {
-                width: calc(100% - 20px);
-                padding: 18px
-            }
-
-                dialog h3 {
-                    font-size: 21px
-                }
+            .wrap { width: calc(100% - 28px) }
+            .bar-in { height: 64px }
+            .bar.open nav { padding-inline: 14px }
+            .hero h1 { font-size: clamp(32px,10vw,44px) }
+            .hero .row .btn { flex: 1 1 100%; justify-content: center }
+            .cta .btn { width: 100%; justify-content: center }
+            .cta { padding: 36px 18px }
+            .tl { padding-left: 22px }
+            .job::before { left: -31px }
+            .foot { flex-direction: column; text-align: center }
+            .chat-b { height: min(52dvh,340px) }
+            .chat-f input { font-size: 16px }
+            .fact { align-items: flex-start }
+            section.wrap h2 { gap: 10px }
+            .ib.hi { width: 38px; height: 38px }
+            dialog { width: calc(100% - 20px); padding: 18px }
+            dialog h3 { font-size: 21px }
         }
 
         /* project preview: full-screen viewer on phones, tablets in portrait and short landscape screens */
         @media(max-width:800px), (max-height:560px) and (hover:none) {
-            dialog.pvmode {
-                width: 100%;
-                max-width: 100%;
-                height: 100vh;
-                height: 100dvh;
-                max-height: 100dvh;
-                margin: 0;
-                border-radius: 0;
-                border: 0;
-                padding: 62px 10px 10px
-            }
-
-                dialog.pvmode #dlgBody > :not(.pv) {
-                    display: none
-                }
-
-                dialog.pvmode .pv {
-                    margin-top: 0
-                }
-
-                    dialog.pvmode .pv iframe {
-                        height: calc(100vh - 140px);
-                        height: calc(100dvh - 140px)
-                    }
-
-                dialog.pvmode .dlg-actions {
-                    position: fixed;
-                    top: calc(10px + env(safe-area-inset-top,0px));
-                    right: 10px
-                }
+            dialog.pvmode { width: 100%; max-width: 100%; height: 100vh; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; border: 0; padding: 62px 10px 10px }
+            dialog.pvmode #dlgBody > :not(.pv) { display: none }
+            dialog.pvmode .pv { margin-top: 0 }
+            dialog.pvmode .pv iframe { height: calc(100vh - 140px); height: calc(100dvh - 140px) }
+            dialog.pvmode .dlg-actions { position: fixed; top: calc(10px + env(safe-area-inset-top,0px)); right: 10px }
         }
 
         /* touch screens, kiosks and HMI panels */
         @media(hover:none), (pointer:coarse) {
-            .btn, .chips button, .sugg button {
-                min-height: 44px
-            }
-
-            .icon-btn {
-                min-width: 44px;
-                min-height: 44px
-            }
-
-            summary {
-                min-height: 48px;
-                align-items: center
-            }
-
-            .card:hover, .proj:hover, .job:hover, .tags span:hover {
-                transform: none
-            }
-
-            .proj {
-                transform: none
-            }
-
-            .go {
-                opacity: 1;
-                transform: none
-            }
+            .btn, .chips button, .sugg button { min-height: 44px }
+            .icon-btn { min-width: 44px; min-height: 44px }
+            summary { min-height: 48px; align-items: center }
+            .card:hover, .proj:hover, .job:hover, .tags span:hover { transform: none }
+            .proj { transform: none }
+            .go { opacity: 1; transform: none }
         }
 
         /* short landscape screens (phones sideways, 1280x720 panels) */
         @media(max-height:560px) and (orientation:landscape) {
-            html {
-                scroll-padding-top: 68px
-            }
-
-            .bar-in {
-                height: 56px
-            }
-
-            .hero {
-                padding-top: 28px;
-                min-height: 0
-            }
-
-            .chat-b {
-                height: 44dvh
-            }
-
-            dialog {
-                max-height: 94dvh
-            }
+            html { scroll-padding-top: 68px }
+            .bar-in { height: 56px }
+            .hero { padding-top: 28px; min-height: 0 }
+            .chat-b { height: 44dvh }
+            dialog { max-height: 94dvh }
         }
 
         /* large laptop / desktop / wall displays */
         @media(min-width:1600px) {
-            .wrap {
-                width: min(1440px,calc(100% - 96px))
-            }
-
-            body {
-                font-size: 17px
-            }
+            .wrap { width: min(1440px,calc(100% - 96px)) }
+            body { font-size: 17px }
         }
 
         @supports (zoom:1) {
             @media(min-width:1920px) {
-                html {
-                    zoom: 1.2
-                }
-
-                dialog {
-                    max-height: calc(90dvh / 1.2)
-                }
+                html { zoom: 1.2 }
+                dialog { max-height: calc(90dvh / 1.2) }
             }
 
             @media(min-width:2560px) {
-                html {
-                    zoom: 1.5
-                }
-
-                dialog {
-                    max-height: calc(90dvh / 1.5)
-                }
+                html { zoom: 1.5 }
+                dialog { max-height: calc(90dvh / 1.5) }
             }
+        }
+
+        /* PDF.js pages */
+        .pdfpages { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; min-width: 0; max-height: min(68vh,560px); overflow: auto; padding: 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--soft); -webkit-overflow-scrolling: touch }
+        .pdfpages canvas { display: block; width: 100%; max-width: 100%; height: auto; background: #fff; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.2) }
+        .pdf-msg { margin: 24px; text-align: center }
+        @media(max-width:800px), (max-height:560px) and (hover:none) {
+            dialog.pvmode .pdfpages { max-height: none; overflow: visible; padding: 0; border: 0; background: none }
         }
     </style>
 </head>
@@ -2960,9 +2753,9 @@
             curFile = FILES[p.t] || null;
             $("#dlgBody").innerHTML =
                 `<div class="dh"><i class="ib hi">${I(p.g)}</i><div><span class="cat">${p.c}</span><h3>${esc(p.t)}</h3></div></div>
-             <div class="tags" style="margin-bottom:16px">${p.s.split(", ").map(x => `<span>${esc(x)}</span>`).join("")}</div>
-             <ul class="chk">${p.b.map(x => `<li>${I("check")}<span>${esc(x)}</span></li>`).join("")}</ul>
-             ${curFile ? '<div class="pv" id="pv"></div>' : ""}`;
+         <div class="tags" style="margin-bottom:16px">${p.s.split(", ").map(x => `<span>${esc(x)}</span>`).join("")}</div>
+         <ul class="chk">${p.b.map(x => `<li>${I("check")}<span>${esc(x)}</span></li>`).join("")}</ul>
+         ${curFile ? '<div class="pv" id="pv"></div>' : ""}`;
             pvBtn.hidden = !curFile;
             pvBtn.innerHTML = I("eye") + "<span>Preview</span>";
             dlg.classList.remove("wide");
@@ -2975,13 +2768,50 @@
             pvBtn.querySelector("span").textContent = open ? "Hide" : "Preview";
             if (open && !box.firstChild) {
                 const url = new URL(curFile, location.href).href;
-                const src = /\.pdf$/i.test(curFile)
-                    ? url + "#toolbar=0&navpanes=0&view=FitH"
-                    : "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(url);
-                box.innerHTML = `<div class="pv-tools"><a class="btn" href="${url}" target="_blank" rel="noopener">${I("external")}Open full file in new tab</a></div><iframe src="${src}" title="Project preview" loading="lazy" allowfullscreen></iframe>
-             `;
+                const tools = `<div class="pv-tools"><a class="btn" href="${url}" target="_blank" rel="noopener">${I("external")}Open full file in new tab</a></div>`;
+                if (/\.pdf$/i.test(curFile)) renderPdf(box, url, tools);
+                else box.innerHTML = tools + `<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}" title="Project preview" loading="lazy" allowfullscreen></iframe>`;
             }
         };
+        /* PDF.js viewer: draws every page on canvas, so it scrolls properly on iPhone Safari */
+        const PDFJS_SRC = [
+            ["https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/", "pdf.min.js", "pdf.worker.min.js"],
+            ["https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/", "pdf.min.js", "pdf.worker.min.js"]
+        ];
+        const loadScript = u => new Promise((res, rej) => { const s = document.createElement("script"); s.src = u; s.onload = res; s.onerror = () => rej(new Error("Could not load " + u)); document.head.appendChild(s) });
+        async function loadPdfJs() {
+            if (window.pdfjsLib && window.pdfjsLib.__ok) return window.pdfjsLib;
+            let last;
+            for (const [B, m, w] of PDFJS_SRC) {
+                try {
+                    await loadScript(B + m);
+                    const lib = window.pdfjsLib;
+                    try { const blob = await (await fetch(B + w)).blob(); lib.GlobalWorkerOptions.workerSrc = URL.createObjectURL(blob) } catch (e) { lib.GlobalWorkerOptions.workerSrc = B + w }
+                    lib.__ok = 1; return lib;
+                } catch (e) { last = e }
+            }
+            throw last;
+        }
+        async function renderPdf(box, url, tools) {
+            box.innerHTML = tools + '<div class="pdfpages"><p class="muted pdf-msg">Loading preview…</p></div>';
+            const holder = box.querySelector(".pdfpages");
+            try {
+                const lib = await loadPdfJs();
+                const pdf = await lib.getDocument(url).promise;
+                holder.innerHTML = "";
+                for (let n = 1; n <= pdf.numPages; n++) {
+                    const page = await pdf.getPage(n);
+                    const cw = Math.max(holder.clientWidth - 16, 240), dpr = Math.min(devicePixelRatio || 1, 2);
+                    const vp = page.getViewport({ scale: (cw / page.getViewport({ scale: 1 }).width) * dpr });
+                    const c = document.createElement("canvas");
+                    c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+                    holder.appendChild(c);
+                    await page.render({ canvasContext: c.getContext("2d"), viewport: vp }).promise;
+                }
+            } catch (e) {
+                holder.innerHTML = '<p class="muted pdf-msg">Built-in viewer failed (' + esc((e && e.message) || e) + '). Showing backup viewer…</p><iframe src="https://docs.google.com/viewer?embedded=true&url=' + encodeURIComponent(url) + '" title="PDF preview" style="width:100%;height:70vh;border:0;border-radius:8px;background:#fff"></iframe>';
+            }
+        }
         drawProj(); $("#yr").textContent = new Date().getFullYear();
 
         /* mobile menu */
